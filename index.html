@@ -26,9 +26,18 @@
     />
 
     <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     body {
         font-family: 'Source Sans Pro', sans-serif;
         line-height: 1.6;
+        position: relative;
     }
 
     section#content {
@@ -57,6 +66,7 @@
         list-style-type: none;
         padding: 0;
         display: flex;
+        flex-wrap: wrap;
     }
 
     .icons li {
@@ -75,22 +85,22 @@
     .bold {
         font-weight: bold;
     }
-	
-	.italic {
-    font-style: italic;
-	}
+
+    .italic {
+        font-style: italic;
+    }
 
     .intro-text {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto; 
-    padding: 20px 0;
-    line-height: 1.6;
-	}
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px 0;
+        line-height: 1.6;
+    }
 
     .additional-text {
         font-size: 0.8rem;
@@ -98,44 +108,63 @@
         margin-left: 5px;
         color: #666;
     }
-	
-	.avatar {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-	}
-	
-	@media (max-width: 768px) {
-    .intro-text {
-        max-width: 90%;
-        padding: 15px 0;
-        line-height: 1.8;
+
+    .avatar {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
-    section#content {
-        margin: 10px; /* Add margin to section content to avoid text being too close to edges */
+    .tumblr-icon {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: #333;
+        text-decoration: none;
+        z-index: 1000;
     }
 
-    .icons {
-        margin-top: 20px; /* Ensure there's some space between the icons and the intro block */
+    .tumblr-icon:hover {
+        color: #007bff;
     }
-	}
 
+    @media (max-width: 768px) {
+        .intro-text {
+            max-width: 90%;
+            padding: 15px 0;
+            line-height: 1.8;
+        }
+
+        section#content {
+            margin: 10px;
+        }
+
+        .icons {
+            margin-top: 20px;
+        }
+    }
     </style>
-
 </head>
 
 <body>
+
+    <!-- Tumblr Icon -->
+    <a href="https://www.tumblr.com/blog/xefwdett343" class="tumblr-icon" title="Hmm?" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-tumblr"></i>
+    </a>
+
     <section id="content">
-	<!-- Avatar image -->
-      <img src="image.jpg" alt="fragments" class="avatar" />
+        <!-- Avatar image -->
+        <img src="image.jpg" alt="fragments" class="avatar" />
+
         <!-- Text -->
         <h1>Wonseop Lim</h1>
-		<p class="intro-text">
-		I am an incoming PhD Student in the Nielsen Lab at UC Berkeley. I graduated from Seoul National University (South Korea) with a BS in Earth and Life Sciences, along with a minor in Statistics. I am interested in both empirical and theoretical questions arising in population genetics and phylogenetics.
-		</p>
+        <p class="intro-text">
+            I am an incoming PhD Student in the Nielsen Lab at UC Berkeley. I graduated from Seoul National University (South Korea) with a BS in Earth and Life Sciences, along with a minor in Statistics. I am interested in both empirical and theoretical questions arising in population genetics and phylogenetics.
+        </p>
 
         <!-- Icons -->
         <ul class="icons">
@@ -156,12 +185,13 @@
             </li>
         </ul>
 
-        <!-- Pub -->
+        <!-- Publications -->
         <h2>Publications<span class="additional-text">(* denotes equal contributions)</span></h2>
         <p>
-		<span class="bold">Lim, W.</span>, Bang, W. J., Baek, M. J., Park, S. J., & Shin, S. (2024). Phylogeny and evolution of larval feeding mode in the megadiverse superfamily Sciaroidea (Diptera). <span class="italic">Insect Systematics and Diversity, 8</span>(6), ixae035. <a href="https://doi.org/10.1093/isd/ixae035" target="_blank">https://doi.org/10.1093/isd/ixae035</a>
-		</p>
+            <span class="bold">Lim, W.</span>, Bang, W. J., Baek, M. J., Park, S. J., & Shin, S. (2024). Phylogeny and evolution of larval feeding mode in the megadiverse superfamily Sciaroidea (Diptera). <span class="italic">Insect Systematics and Diversity, 8</span>(6), ixae035. <a href="https://doi.org/10.1093/isd/ixae035" target="_blank">https://doi.org/10.1093/isd/ixae035</a>
+        </p>
     </section>
+
 </body>
 
 </html>
