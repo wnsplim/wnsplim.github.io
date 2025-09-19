@@ -21,7 +21,7 @@
       width: 270px;
       padding: 20px;
       color: white;
-      background: url('5cbdd7d4-b38f-4330-b116-32c3e4fbd15d.png') no-repeat center center;
+      background: url('side.png') no-repeat center center;
       background-size: cover;
       box-shadow: 2px 0 5px rgba(0,0,0,0.1);
       display: flex;
@@ -155,6 +155,22 @@
     .section-container a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      body {
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+      }
+
+      .main {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -184,7 +200,7 @@
           <li><a href="https://github.com/wnsplim"><i class="fab fa-github"></i></a></li>
         </ul>
         <p class="about-bio">
-          Hi! I’m a PhD student in the Nielsen Lab at UC Berkeley. I graduated from Seoul National University with a BS in Earth and Life Sciences, along with a minor in Statistics. My research interests span both empirical and theoretical questions in population genetics and phylogenetics.
+          PhD student in the Nielsen Lab at UC Berkeley. I graduated from Seoul National University with a BS in Earth and Life Sciences, along with a minor in Statistics. My research interests span both empirical and theoretical questions in population genetics and phylogenetics.
         </p>
       </div>
 
