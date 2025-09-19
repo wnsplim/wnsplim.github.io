@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wonseop Lim</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
 <style>
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  body {
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     height: 100vh;
@@ -41,7 +46,6 @@
   .topbar {
     background-color: #000;
     padding: 0 20px;
-    border-radius: 0;
     margin: -20px -20px 20px -20px;
   }
 
@@ -172,7 +176,6 @@
       max-width: 100%;
     }
 
-    /* fix small right margin / horizontal scroll */
     html, body {
       width: 100%;
       overflow-x: hidden;
@@ -189,9 +192,7 @@
 </head>
 <body>
 
-  <div class="sidebar">
-    <!-- Empty left panel -->
-  </div>
+  <div class="sidebar"></div>
 
   <div class="main">
     <div class="topbar">
