@@ -8,219 +8,209 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
-
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  body {
-    font-family: 'Source Sans Pro', sans-serif;
-    min-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #fff;
-  }
-
-  .main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .topbar {
-    background-color: #000;
-    padding: 0 20px;
-    margin: -20px -20px 20px -20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  nav {
-    display: flex;
-  }
-
-  nav button {
-    background: none;
-    border: none;
-    font-size: 1em;
-    margin-right: 15px;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    color: white;
-    font-weight: 600;
-  }
-
-  nav button.active {
-    border-color: white;
-    font-weight: 900;
-  }
-
-  .tab-content {
-    display: none;
-  }
-
-  .tab-content.active {
-    display: block;
-  }
-
-  h2 {
-    margin-top: 20px;
-  }
-
-  .additional-text {
-    font-size: 0.8rem;
-    color: #666;
-  }
-
-  #home > h2:first-of-type {
-    text-align: center;
-  }
-
-  #home .about-container {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  #home .profile-photo {
-    width: 120px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    margin: 15px auto 10px auto;
-    display: block;
-  }
-
-  #home .icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto 15px auto;
-  }
-
-  #home .icons li a {
-    font-size: 1.4rem;
-    color: black;
-    text-decoration: none;
-  }
-
-  #home .icons li a:hover {
-    color: #333;
-  }
-
-  #home .about-bio {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1em;
-    line-height: 1.6;
-  }
-
-  .section-container {
-    max-width: 800px;
-    margin: 40px auto 0 auto;
-  }
-
-  .section-container p {
-    margin-bottom: 1em;
-  }
-
-  .section-container a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  .section-container a:hover {
-    text-decoration: underline;
-  }
-
-  iframe {
-    width: 100%;
-    height: 80vh;
-    border: none;
-  }
-
-  @media (max-width: 768px) {
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      display: block;
+      min-height: 100vh;
+    }
     .main {
-      padding: 15px;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
     }
-
+    .topbar {
+      background-color: #000;
+      padding: 0 20px;
+      margin: -20px -20px 20px -20px;
+    }
+    nav {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-size: 1em;
+      margin-right: 15px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: white;
+      font-weight: 600;
+      transition: font-weight 0.3s ease;
+    }
+    nav button.active {
+      border-color: white;
+      font-weight: 900;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    .additional-text {
+      font-size: 0.8rem;
+      color: #666;
+    }
     iframe {
-      height: 70vh;
+      width: 100%;
+      height: 80vh;
+      border: none;
     }
-  }
-</style>
+    #home > h2:first-of-type {
+      text-align: center;
+    }
+    #home .about-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #home .profile-photo {
+      width: 120px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      margin: 15px auto 10px auto;
+      display: block;
+    }
+    #home .icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto 15px auto;
+      color: black;
+    }
+    #home .icons li a {
+      font-size: 1.4rem;
+      color: black;
+      text-decoration: none;
+    }
+    #home .icons li a:hover {
+      color: #333;
+    }
+    #home .about-bio {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    .section-container {
+      text-align: left;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+    }
+    .section-container p {
+      margin-bottom: 1em;
+    }
+    .section-container a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .section-container a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      body {
+        height: auto;
+        overflow: auto;
+      }
+      .main {
+        width: 100%;
+        max-width: 100%;
+      }
+      html, body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      #tumblr iframe {
+        width: 100% !important;
+        max-width: 100%;
+        display: block;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="main">
-  <div class="topbar">
-    <nav>
-      <button class="tab-button active" data-tab="home">Home</button>
-      <button class="tab-button" data-tab="tumblr">Weird Stuffs</button>
-    </nav>
-  </div>
-
-  <div id="home" class="tab-content active">
-    <h2>About</h2>
-
-    <div class="about-container">
-      <img src="image.jpg" alt="Profile Photo" class="profile-photo" />
-      <ul class="icons">
-        <li><a href="mailto:REMOVETHISdavid9456@berkeley.edu"><i class="fas fa-envelope"></i></a></li>
-        <li><a href="https://scholar.google.com/citations?user=0UBxpdMAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a></li>
-        <li><a href="https://www.researchgate.net/profile/Wonseop-Lim"><i class="ai ai-researchgate"></i></a></li>
-        <li><a href="https://x.com/LimWonseop35387"><i class="fab fa-x-twitter"></i></a></li>
-        <li><a href="https://github.com/wnsplim"><i class="fab fa-github"></i></a></li>
-      </ul>
-      <p class="about-bio">
-        PhD student in the Nielsen Lab at UC Berkeley. I graduated from Seoul National University with a BS in Earth and Life Sciences, along with a minor in Statistics. My research interests span both empirical and theoretical questions in population genetics and phylogenetics.
-      </p>
+  <div class="main">
+    <div class="topbar">
+      <nav>
+        <button class="tab-button active" data-tab="home">Home</button>
+        <button class="tab-button" data-tab="tumblr">Weird Stuffs</button>
+      </nav>
     </div>
-
-    <div class="section-container">
-      <h2>Education</h2>
-      <p><strong><em>University of California, Berkeley</em></strong></p>
-      <p><strong>Aug. 2025 ~ Present:</strong> PhD Student, <em>Department of Integrative Biology</em></p>
-      <p><strong><em>Seoul National University</em></strong></p>
-      <p><strong>Mar. 2018 ~ Feb. 2025:</strong> BSc, <em>Earth Science Education</em>, <em>Biological Sciences</em> (Double major), <em>Statistics</em> (Minor)</p>
-      <p>(Apr. 2019 ~ Feb. 2021: Mandatory military service)</p>
+    <div id="home" class="tab-content active">
+      <h2>About</h2>
+      <div class="about-container">
+        <img src="image.jpg" alt="Profile Photo" class="profile-photo" />
+        <ul class="icons">
+          <li><a href="mailto:REMOVETHISdavid9456@berkeley.edu"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://scholar.google.com/citations?user=0UBxpdMAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a></li>
+          <li><a href="https://www.researchgate.net/profile/Wonseop-Lim"><i class="ai ai-researchgate"></i></a></li>
+          <li><a href="https://x.com/LimWonseop35387"><i class="fab fa-x-twitter"></i></a></li>
+          <li><a href="https://github.com/wnsplim"><i class="fab fa-github"></i></a></li>
+        </ul>
+        <p class="about-bio">
+          PhD student in the Nielsen Lab at UC Berkeley. I graduated from Seoul National University with a BS in Earth and Life Sciences, along with a minor in Statistics. My research interests span both empirical and theoretical questions in population genetics and phylogenetics.
+        </p>
+      </div>
+      <div id="education-section" class="section-container">
+        <h2>Education</h2>
+        <p><strong><em>University of California, Berkeley</em></strong></p>
+        <p><strong>Aug. 2025 ~ Present: </strong>PhD Student, <em>Department of Integrative Biology</em></p>
+        <p><strong><em>Seoul National University</em></strong></p>
+        <p><strong>Mar. 2018 ~ Feb. 2025: </strong> BSc, <em>Earth Science Education</em>, <em>Biological Sciences</em> (Double major), <em>Statistics</em> (Minor)</p>
+        <p>(Apr. 2019 ~ Feb. 2021: Mandatory military service)</p>
+      </div>
+      <div id="publications-section" class="section-container">
+        <h2>Publications <span class="additional-text">(* denotes equal contributions)</span></h2>
+        <p>
+          <strong>Lim, W.</strong> (2025). Diversification dynamics of the Mesozoic ostracod family Cyprideidae Martin, 1940: Disentangling taxonomic inflation and environmental drivers. <em>Palaeontologia Electronica, 28</em>(3), a54. <a href="https://doi.org/10.26879/1600" target="_blank">https://doi.org/10.26879/1600</a>
+        </p>
+        <p>
+          <strong>Lim, W.</strong>, Bang, W. J., &amp; Shin, S. (2025). New records of <em>Macrocera</em> Meigen 1803 (Diptera, Keroplatidae) from the Korean Peninsula with description of a new species. <em>Zootaxa, 5665</em>(2), 239–255. <a href="https://doi.org/10.11646/zootaxa.5665.2.5" target="_blank">https://doi.org/10.11646/zootaxa.5665.2.5</a>
+        </p>
+        <p>
+          <strong>Lim, W.</strong>, Bang, W. J., Baek, M. J., Park, S. J., &amp; Shin, S. (2024). Phylogeny and evolution of larval feeding mode in the megadiverse superfamily Sciaroidea (Diptera). <em>Insect Systematics and Diversity, 8</em>(6), ixae035. <a href="https://doi.org/10.1093/isd/ixae035" target="_blank">https://doi.org/10.1093/isd/ixae035</a>
+        </p>
+      </div>
+      <div id="posters-section" class="section-container">
+        <h2>Poster Presentations</h2>
+        <p>
+          <strong>Lim, W.</strong>, &amp; Choi, B. G. (2024). Reconstructing global diversification pattern of non-marine Cypridoidea from fossil occurrence data. <em>37th International Geological Congress</em>, Busan, South Korea, Aug. 26–28, 2024.
+        </p>
+      </div>
     </div>
-
-    <div class="section-container">
-      <h2>Publications</h2>
-      <p><strong>Lim, W.</strong> (2025). Diversification dynamics of the Mesozoic ostracod family Cyprideidae Martin, 1940. <em>Palaeontologia Electronica</em>.</p>
+    <div id="tumblr" class="tab-content">
+      <iframe src="https://xefwdett343.tumblr.com" allowfullscreen></iframe>
     </div>
   </div>
-
-  <div id="tumblr" class="tab-content">
-    <iframe src="https://xefwdett343.tumblr.com"></iframe>
-  </div>
-</div>
-
-<script>
-  const buttons = document.querySelectorAll('.tab-button');
-  const tabs = document.querySelectorAll('.tab-content');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      tabs.forEach(t => t.classList.remove('active'));
-
-      button.classList.add('active');
-      document.getElementById(button.dataset.tab).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const tabs = document.querySelectorAll('.tab-content');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        tabs.forEach(tab => tab.classList.remove('active'));
+        button.classList.add('active');
+        const target = button.dataset.tab;
+        if (target) {
+          document.getElementById(target).classList.add('active');
+        }
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
