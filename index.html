@@ -17,26 +17,13 @@
 
   body {
     font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    height: 100vh;
+    display: block; /* no sidebar layout */
+    min-height: 100vh;
     overflow: hidden;
   }
 
-  .sidebar {
-    width: 270px;
-    padding: 20px;
-    color: white;
-    background: url('side.png') no-repeat center center;
-    background-size: cover;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .main {
-    flex: 1;
+    width: 100%;
     padding: 20px;
     overflow-y: auto;
     display: flex;
@@ -161,12 +148,7 @@
   }
 
   @media (max-width: 768px) {
-    .sidebar {
-      display: none;
-    }
-
     body {
-      flex-direction: column;
       height: auto;
       overflow: auto;
     }
@@ -191,8 +173,6 @@
 
 </head>
 <body>
-
-  <div class="sidebar"></div>
 
   <div class="main">
     <div class="topbar">
@@ -222,10 +202,10 @@
       <div id="education-section" class="section-container">
         <h2>Education</h2>
         <p><strong><em>University of California, Berkeley</em></strong></p>
-		<p><strong>Aug. 2025 ~ Present: </strong>PhD Student, <em>Department of Integrative Biology</em></p>
+        <p><strong>Aug. 2025 ~ Present: </strong>PhD Student, <em>Department of Integrative Biology</em></p>
         <p><strong><em>Seoul National University</em></strong></p>
-		<p><strong>Mar. 2018 ~ Feb. 2025: </strong> BSc, <em>Earth Science Education</em>, <em>Biological Sciences</em> (Double major), <em>Statistics</em> (Minor)</p>
-		<p>(Apr. 2019 ~ Feb. 2021: Mandatory military service)</p>
+        <p><strong>Mar. 2018 ~ Feb. 2025: </strong> BSc, <em>Earth Science Education</em>, <em>Biological Sciences</em> (Double major), <em>Statistics</em> (Minor)</p>
+        <p>(Apr. 2019 ~ Feb. 2021: Mandatory military service)</p>
       </div>
 
       <div id="publications-section" class="section-container">
